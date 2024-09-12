@@ -335,20 +335,23 @@ The basic network has 3,636 nodes and 67,285 edges, and it is made of 233 compon
 The resulting networks above each form an unreadable hairball of nodes and edges.
 <!-- #endregion -->
 
+<!-- #region tags=["hermeneutics"] -->
 
 - Nodes with weight = 15.  The networks has 60 nodes and 1,116 edges. It has two components. It is starting to make sense, but the density in the inner core makes it difficult to read. The institutions with the highest betweenness degree are by decreasing order 招商輪船局 (0.03261478), 英界會審公堂,  工部局, 江海關, 法界會審公堂 (0.1970726), 松滬捐釐局, 法國租界巡捕房, 廣肇公所, 怡和洋行, 兩江總督, 法國公司, 江南製造局, 上海縣暑 (0.0123001). All nodes are interconnected at one step.
 - Nodes with weight = 20.  The network has 39 nodes and 590 edges. It has one component. It is starting to make sense, but the density in the inner core makes it difficult to read. Diameter is 2. All nodes are interconnected at one step.
 - Nodes with weight = 30.  The network has 21 nodes and 187 edges. It has one component. We can see that the main nodes are very much public institutions, except for the Shantung Road Hospital (仁濟醫院). Diameter is 2. All nodes are interconnected at one step.
 - Nodes with weight = 40.  The networks has 14 nodes and 83 edges. It has 1 component.  Diameter is 2. All nodes are interconnected at one step.
+<!-- #endregion -->
 
-
-
+<!-- #region tags=["hermeneutics"] -->
 I also examined whether community detection would provide relevant clusters. I used the glay algotithm in Cytoscape. Community detection create4 94 clusters, which points to the heterogeneity of the network. The three largest clusters form hairball in themselves. I was able to qualify only a small number of clusters:
+
 - Cluster 1 : it is a very dense network, with sub-clusters. The Shilin Buddhist Temple(師林禪寺) constitutes almost an ego-network in itself. We also find a lot of newspapers, which confirms that these nodes should be removed from the start. They are not actors per se, but "sources". It has an intrinsic value, but it somehow introduces a bias by creating connections that are even less real than the mentions of actors in articles.
 - Cluster 3: it is made up mostly of Chinese local public offices, with a significant number of foreign goods companies. The 兩江營務處 and 發審局 are the  central nodes that connect major parts of  this cluster. Yet it retains the shape of a string network.
 - Cluster 7: it is quite obviously the cluster of justice and police institutions
 - Cluster 8: it is made up mostly of Chinese institutions, a lot at a high level (Liangjiang governor general 兩江總督), both locally and higher up (Ministry of Finance 戶部). Yet it seems to be a cluster centered on issues of maritime affairs, with the Customs, the Jiangnan Arsenal, Tax offices, maritime defense bureaus, but also some academies.
 
+<!-- #endregion -->
 
 ```R jdh={"object": {"source": ["Figure 4. One mode network of individuals with a weight above 15"], "type": "image"}} tags=["figure-4"] vscode={"languageId": "r"}
 library("IRdisplay")
