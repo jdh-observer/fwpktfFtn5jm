@@ -158,7 +158,7 @@ After removing the duplicates that resulted from joining the articles and the li
 
 The distribution of the 50,525 unique documents in the corpus shows a pattern of regular increase through the twenty years under study. The first two years are clearly underrepresented, which may reflect the nature of articles during the first two years (more reliance on official gazettes that I have excluded). This increase may also be linked to the number of pages in the newspaper. The number of articles became more stable after 1884, despite irregularities. An analysis by type of names failed to reveal specific patterns. We can only note that the *Shenbao* reported on the same types of population in the first twenty years of its existence.
 
-```R jdh={"object": {"source": ["Figure 1. Distribution of the selected articles by year"], "type": "image"}} tags=["figure-1"]
+```R jdh={"object": {"source": ["Figure 1. Distribution of the selected articles by year"], "type": "image"}} tags=["figure-1"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig1.png")
 ```
@@ -282,7 +282,7 @@ To analyse the network, I applied the pruning method that consists in removing n
 
 The pruning of degrees alters the network substantially. When all nodes with only one degree are removed, the network shrinks almost by one half (-45 percent for degrees) and slightly less in terms of edges (-38 percent). At five degrees, the network shrinks further on all accounts. The number of nodes drops to 1,636 (-91.1 percent) and edges drop to 4,564 (-84.9 percent). At ten degrees, only 2.5 percent of degrees and 6 percent of edges remain in the main component. The same rate of decrease happens at each new step of pruning. At 40, we can see the core structure of the network with four main groups of individuals who are connected to a diverse range of institutions, although public institutions clearly dominate. This is basically the same after further pruning. Only the number of institutions decreases. The network retains a high level of consistency through the pruning process. At the highest number of degrees (100 or more), it is made of 26 nodes and 39 edges. At 100, only three individuals remain with 23 institutions that include mostly public institutions, except for five business ventures and two charities.
 
-```R jdh={"object": {"source": ["Figure 2. Affiliation network of persons and institutions with 50 degrees or more"], "type": "image"}} tags=["figure-2"]
+```R jdh={"object": {"source": ["Figure 2. Affiliation network of persons and institutions with 50 degrees or more"], "type": "image"}} tags=["figure-2"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig2.png")
 ```
@@ -310,7 +310,7 @@ The last example I want to address are companies (business ventures) and the net
 
 I chose to concentrate my analysis on the individuals that were more important in the entire network. First, I selected the edge list of the individuals that received 20 or more mentions in the *Shenbao*. This approach contributed to removing the cases of institutions with a high degree, but weak links with most individuals in their network. The network initially had 1,406 nodes and 2,286 edges after removing all the A-names (阿) who are not real unique individuals. The three dominant figures are Mo Xiangzhi, Pei Dazhong, and Li Fuxiang. Their pattern of connection shows how much their positions and functions shaped their network. This is obvious for the two county magistrate, Mo Xiangzhi and Pei Dazhong, who share a great number of institutions linked to policing the city, adjudicating judicial matters (Mixed courts, xian office), and handling tax levies. Li Fuxiang is connected mostly to the county magistrate through a limited range of institutions, much of it shipping companies, especially the CMSNC, and the Jiangnan shipyard. Each individual, however, is connected to a much larger set of institutions that are unique to each. The network of these three individuals represents 373 nodes (28 percent of the total) and 409 edges. Beyond these dominant figures, we also find a few other officials (Cai Eryuan (蔡二源), Li Guangdan (黎光旦), Provincial Treasurer (方伯) ) but also a police detective (Wang Rongpei 王榮培), a British Mixed Court official (Luo Shaogeng 羅少耕), and four merchant philanthropists (Shi Shaoqin 施少欽, Shi Shanchang 施善昌, Yan Youzhi 嚴佑之, Li Qiuping 李秋坪).
 
-```R jdh={"object": {"source": ["Figure 3. Affiliation network of persons and organizations with a degree above 20"], "type": "image"}} tags=["figure-3"]
+```R jdh={"object": {"source": ["Figure 3. Affiliation network of persons and organizations with a degree above 20"], "type": "image"}} tags=["figure-3"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig3.png")
 ```
@@ -324,18 +324,24 @@ I selected the individuals with a degree equal or superior to 40. I made the ass
 In the next section, I transform the affiliation network for eminent Chinese (two-mode network) into two one-mode networks with weights. In the person-to-person network, I selected only the individuals with a weight of at least two and extracted the main component from the 256 connected components. The high number of components in the initial network points to the fact that some individuals appeared only in a single news item or in the same news type, limited to one or very few articles. This also confirms the absence of connection between many individuals who appeared in the Shenbao. The complete network, however, still included too many individuals to make it a relevant level of analysis. I further filtered based on two criteria, either the weight (above 15) or betweenness centrality (above 0.025). There was no significant difference as the same main figures — officials — appeared in both networks. The only difference was the presence of philanthropists in the network based on betweenness, which points to the specific role that these individuals played in connection with not just charities, but with official institutions that handled the poor.
 
 <!-- #region tags=["hermeneutics"] -->
-The basic network has 3,636 nodes and 67,285 edges, and it is made of 233 components. I selected only the nodes with at least two degrees. This reduced the network to 2,369 nodes and 6,853 edges. The main component retained  has 1,642 nodes and 6,366 edges, with a diameter of 9 and a radius of 5. The characteristic path length is 3.322. The average number of neighbors is relatively high at 7.754. Network sensity is 0.005. I examined the network in by removing the nodes in successive steps at increasing levels of weight. 
+The basic network has 3,636 nodes and 67,285 edges, and it is made of 233 components. I selected only the nodes with at least two degrees. This reduced the network to 2,369 nodes and 6,853 edges. The main component retained  has 1,642 nodes and 6,366 edges, with a diameter of 9 and a radius of 5. The characteristic path length is 3.322. The average number of neighbors is relatively high at 7.754. Network density is 0.005. I examined the network in by removing the nodes in successive steps at increasing levels of weight. 
+
+- Nodes with weight = 1.  The networks has 2,197 nodes and 41,656 edges. It has 12 components.
+- Nodes with weight = 3.  The networks has 1,342 nodes and 23,530 edges. It has 12 components.
+- Nodes with weight = 4.  The networks has 902 nodes and 15,585 edges. It has 10 components.
+- Nodes with weight = 5.  The networks has 597 nodes and 10,670 edges. It has 10 components.
+- Nodes with weight = 10.  The networks has 125 nodes and 2,883 edges. It has 2 components.
+
+The resulting networks above each form an unreadable hairball of nodes and edges.
+<!-- #endregion -->
 
 
-- Nodes with weight = 1.  The networks has 2,197 nodes and 41,656 edges. It has 12 components. The network is not readable as a hairball.
-- Nodes with weight = 3.  The networks has 1,342 nodes and 23,530 edges. It has 12 components. The network is not readable as a hairball.
-- Nodes with weight = 4.  The networks has 902 nodes and 15,585 edges. It has 10 components. The network is not readable as a hairball.
-- Nodes with weight = 5.  The networks has 597 nodes and 10,670 edges. It has 10 components. The network is not readable as a hairball.
-- Nodes with weight = 10.  The networks has 125 nodes and 2,883 edges. It has 2 components. The network is not readable as a hairball.
 - Nodes with weight = 15.  The networks has 60 nodes and 1,116 edges. It has two components. It is starting to make sense, but the density in the inner core makes it difficult to read. The institutions with the highest betweenness degree are by decreasing order 招商輪船局 (0.03261478), 英界會審公堂,  工部局, 江海關, 法界會審公堂 (0.1970726), 松滬捐釐局, 法國租界巡捕房, 廣肇公所, 怡和洋行, 兩江總督, 法國公司, 江南製造局, 上海縣暑 (0.0123001). All nodes are interconnected at one step.
 - Nodes with weight = 20.  The network has 39 nodes and 590 edges. It has one component. It is starting to make sense, but the density in the inner core makes it difficult to read. Diameter is 2. All nodes are interconnected at one step.
 - Nodes with weight = 30.  The network has 21 nodes and 187 edges. It has one component. We can see that the main nodes are very much public institutions, except for the Shantung Road Hospital (仁濟醫院). Diameter is 2. All nodes are interconnected at one step.
 - Nodes with weight = 40.  The networks has 14 nodes and 83 edges. It has 1 component.  Diameter is 2. All nodes are interconnected at one step.
+
+
 
 I also examined whether community detection would provide relevant clusters. I used the glay algotithm in Cytoscape. Community detection create4 94 clusters, which points to the heterogeneity of the network. The three largest clusters form hairball in themselves. I was able to qualify only a small number of clusters:
 - Cluster 1 : it is a very dense network, with sub-clusters. The Shilin Buddhist Temple(師林禪寺) constitutes almost an ego-network in itself. We also find a lot of newspapers, which confirms that these nodes should be removed from the start. They are not actors per se, but "sources". It has an intrinsic value, but it somehow introduces a bias by creating connections that are even less real than the mentions of actors in articles.
@@ -343,9 +349,8 @@ I also examined whether community detection would provide relevant clusters. I u
 - Cluster 7: it is quite obviously the cluster of justice and police institutions
 - Cluster 8: it is made up mostly of Chinese institutions, a lot at a high level (Liangjiang governor general 兩江總督), both locally and higher up (Ministry of Finance 戶部). Yet it seems to be a cluster centered on issues of maritime affairs, with the Customs, the Jiangnan Arsenal, Tax offices, maritime defense bureaus, but also some academies.
 
-<!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 4. One mode network of individuals with a weight above 15"], "type": "image"}} tags=["figure-4"]
+```R jdh={"object": {"source": ["Figure 4. One mode network of individuals with a weight above 15"], "type": "image"}} tags=["figure-4"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig4.png")
 ```
@@ -399,7 +404,7 @@ Graph of individuals (Institutions)
 I set the parameters at 6 for “Contribution”. The distribution of institutions is seriously distorted by the presence of outliers that leave most other institutions in the same group. The PCA separates quite clearly local-level (Shanghai) institutions along Dimension 2. Within the local-level group, we can also discern a stronger correlation between the outliers in this group (mixed courts, CMSNC) and the county magistrate (上海縣暑), Shanghai Municipal Council (工部局) and the Baojia Bureau (保甲總局). Using cos2 does not change the configuration (see Fig1h).
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 1h. Graph of individuals (Institutions) in PCA"], "type": "image"}} tags=["figure-1h"]
+```R jdh={"object": {"source": ["Figure 1h. Graph of individuals (Institutions) in PCA"], "type": "image"}} tags=["figure-1h"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig1herm.png")
 ```
@@ -408,7 +413,7 @@ display_png(file="./media/Fig1herm.png")
 I removed the four main outliers. The general distribution did not change as the largest number of node contribute very little and are grouped together negatively on Dimension 2 and Dimension 1 (see Fig2h).
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 2h. Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-2h"]
+```R jdh={"object": {"source": ["Figure 2h. Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-2h"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig2herm.png")
 ```
@@ -417,7 +422,7 @@ display_png(file="./media/Fig2herm.png")
 After exploring various levels of classification (4 to 8), I observed that there was no relevance in increasing the number of classes as it failed to change substantially the nature of the highly structured clusters and the less significant clusters. I settled for five classes that produced the graph below. 
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 3h. Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-3h"]
+```R jdh={"object": {"source": ["Figure 3h. Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-3h"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig3herm.png")
 ```
@@ -466,7 +471,7 @@ Based on these results, I did two things:
 •	decide that M15 is my optimal option for the time being.
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 5. Correlation graph of the topic models"], "type": "image"}} tags=["figure-5"]
+```R jdh={"object": {"source": ["Figure 5. Correlation graph of the topic models"], "type": "image"}} tags=["figure-5"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig5.png")
 ```
@@ -513,7 +518,7 @@ Topic modelling seems to simplify brutally the content of the documents and to r
 
 Let me first state the obvious. The main topic that overides all the other is the issue of social order and justice. Although one can find articles of a different nature — different stories — in each of the following topics, they all point to the interaction of individuals with the local judicial system. The Mixed Courts topic is the most prevalent in the corpus, with its associate topics, Mixed Court & Police and Mixed Court & Women. By and large, this is about the same set of issues, but with a greater emphasis on the role of the police in one case and on the involvement of women in the other. The main Mixed Courts topic covers a wide range of issues, including delinquency, petty crimes, but also commercial disputes. Two other topics fit in the same vein, Xian Officials and Criminality. In the first one, the only difference is that these are similar issues of social disorder and disputes, but these were brought before the county magistrate(s) instead of before the mixed courts. I should note right away that the county magistrates were often involved directly or indirectly in mixed court proceedings. Yet topic modelling detected the difference and delineated a specific topic for affairs that concerned only the *xian* magistrate. The Criminality topic refers to both criminal behavior in the city and acts of violence and banditry in the larger area around Shanghai, involving other types of officials. The wealth of materials on issues of social disorder could be read as a reflection of the unstable nature of local society after the opening of the city to foreign trade and residency. It is more likely, however, that this reflected before all how the newspaper operated to collect newsworthy information.
 
-```R jdh={"object": {"source": ["Figure 6. Distribution and share of the topics over all documents in the 15-topic model"], "type": "image"}} tags=["figure-6"]
+```R jdh={"object": {"source": ["Figure 6. Distribution and share of the topics over all documents in the 15-topic model"], "type": "image"}} tags=["figure-6"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig6.png")
 ```
@@ -523,7 +528,7 @@ Except for the two "Relief Operations" topics, the other topics cover issues tha
 
 In the 20-topic model, what I found was mostly a refinement of the topics discussed above. A good example is the Mixed Court French topic that pulled out articles more directly linked to the Mixed Court in the French Concession. In the same way, the Police topic assembles articles from the larger Mixed Courts topic, though with a focus on the action of the police. The model also created a second Local Officials topic that traced further circles in the realm of social disorder with a topic on Shop Disputes, Women & Family (mostly about women kidnapping, sale, and opium), Local Officials & Social Order, and Social Incidents (this was more about house fires and similar issues). The 20-topic model did not alter substantially the distribution and nature of the main themes uncovered by the 15-topic model. There is a high degree of consistency, but it contributes to highlighting where one could look at for more particular inroads into the initial topics. The only new topic was a set of articles that concerned officials of imperial ministries. If we look at the additional topics in the 30-topic model, there is a mix of what I call refined topics and new topics. Under the former, Charity & medicine is clearly an offshoot of Relief Operations, Banditry is a subset of Criminality with a focus on areas external to Shanghai, Foreigners & Consulates emerges from the original Shipping & Consulates, with a focus on Westerners, Companies and Business (also present in the 20-topic model). The Police topic branches into a more precise topic on the police of the foreign settlements. Four topics seem to be more original, even if they were somehow subsumed in the previous models. The 30-topic model introduces two topics where opium figures in association with issues of trade or women (opium dens). It also sets apart a topic that deals with the academies of classical learning and not unsurprisingly a topic whose center is Li Fuxiang.
 
-```R jdh={"object": {"source": ["Figure 7. Correlation graph of the 15 topics in the 15-topic model"], "type": "image"}} tags=["figure-7"]
+```R jdh={"object": {"source": ["Figure 7. Correlation graph of the 15 topics in the 15-topic model"], "type": "image"}} tags=["figure-7"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig7.png")
 ```
@@ -533,7 +538,7 @@ The three correlation graphs for the 15-, 20- and 30-topic models show a consist
 
 There were a few noticeable changes over time in the relative importance of topics. One cannot point to a very drastic evolution, but rather to smooth trends. I shall take the 15-topic and the 20-topic models as examples, just because even beyond ten different colors, a graph becomes difficult to decipher. The two graphs show the proportion of each topic in a given year. Let us first point out what seems to be an anomaly. In 1872, the share of advertising by publishers seems very high, but it is not representative. This was the very start of the newspaper, with only a few months of publication at the start of the newspaper and, unsurprisingly, it was filled with advertising that probably also included advertisements by the *Shenbao* itself. We can see that three topics experienced a certain growth, Topic 10 (Xian officials), especially at the end of the period, Topic 12 (Chinese Army) also increased by the end of the period and Topic 4, with an increase around 1880. The other topics hardly changed, except for a small decline of the general Mixed Courts topic. The 20-topic graph did present a more diverse evolution. It singled out Topic 10 (Criminality) as a consistently increasing autonomous topic, while Topic 19 (Mixed Court French) also showed ups and down, but at a fairly high level throughout the period. In parallel, Topic 12 (Mixed Court & Police) experienced a noticeable increase, especially at the end of the period. On the opposite, Topic 8 (Local officials & Criminality) lost in importance substantially in the last years. We can make two preliminary observations about the use of different models: the shift from 15 topics to 20 topics highlights better the trends that shaped the news thanks to a more precise focus on sub-topics. On the other hand, there was by and large a certain stability in the nature of the types of news that the *Shenbao* chose to publish.
 
-```R jdh={"object": {"source": ["Figure 8. Topic proportion over time in the 15- topic model (1872-1892)"], "type": "image"}} tags=["figure-8"]
+```R jdh={"object": {"source": ["Figure 8. Topic proportion over time in the 15- topic model (1872-1892)"], "type": "image"}} tags=["figure-8"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig8.png")
 ```
@@ -564,7 +569,7 @@ The reading of the articles helped to get a better grasp of the content of the a
 
 I selected the first 15 documents to examine to which topic they related more. This provides a better illustration of the composition of topics within a given document.
 
-```R jdh={"object": {"source": ["Figure 9. Topic distribution among the first fifteen documents of the sample"], "type": "image"}} tags=["figure-9"]
+```R jdh={"object": {"source": ["Figure 9. Topic distribution among the first fifteen documents of the sample"], "type": "image"}} tags=["figure-9"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig9.png")
 ```
@@ -574,7 +579,7 @@ We can see for example that document 6 is strongly associated with topic 14 and 
 
 In figure 10, the display of the top 50 words in each topic can highlight better the differences and the impact on word distribution on the definition of topics. The word cloud visualization is only one way to materialize what can also be seen in the form of tables.
 
-```R jdh={"object": {"source": ["Figure 10. Word frequency for nine topics in the form of word clouds"], "type": "image"}} tags=["figure-10"]
+```R jdh={"object": {"source": ["Figure 10. Word frequency for nine topics in the form of word clouds"], "type": "image"}} tags=["figure-10"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig10.png")
 ```
@@ -624,6 +629,6 @@ R.version 4.2.2.
 <div class="cite2c-biblio"></div>
 <!-- #endregion -->
 
-```R
+```R vscode={"languageId": "r"}
 
 ```
