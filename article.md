@@ -158,7 +158,7 @@ After removing the duplicates that resulted from joining the articles and the li
 
 The distribution of the 50,525 unique documents in the corpus shows a pattern of regular increase through the twenty years under study. The first two years are clearly underrepresented, which may reflect the nature of articles during the first two years (more reliance on official gazettes that I have excluded). This increase may also be linked to the number of pages in the newspaper. The number of articles became more stable after 1884, despite irregularities. An analysis by type of names failed to reveal specific patterns. We can only note that the *Shenbao* reported on the same types of population in the first twenty years of its existence.
 
-```R jdh={"object": {"source": ["Figure 1. Distribution of the selected articles by year"], "type": "image"}} tags=["figure-1"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Distribution of the selected articles by year"], "type": "image"}} tags=["figure-1"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig1.png")
 ```
@@ -282,7 +282,7 @@ To analyse the network, I applied the pruning method that consists in removing n
 
 The pruning of degrees alters the network substantially. When all nodes with only one degree are removed, the network shrinks almost by one half (-45 percent for degrees) and slightly less in terms of edges (-38 percent). At five degrees, the network shrinks further on all accounts. The number of nodes drops to 1,636 (-91.1 percent) and edges drop to 4,564 (-84.9 percent). At ten degrees, only 2.5 percent of degrees and 6 percent of edges remain in the main component. The same rate of decrease happens at each new step of pruning. At 40, we can see the core structure of the network with four main groups of individuals who are connected to a diverse range of institutions, although public institutions clearly dominate. This is basically the same after further pruning. Only the number of institutions decreases. The network retains a high level of consistency through the pruning process. At the highest number of degrees (100 or more), it is made of 26 nodes and 39 edges. At 100, only three individuals remain with 23 institutions that include mostly public institutions, except for five business ventures and two charities.
 
-```R jdh={"object": {"source": ["Figure 2. Affiliation network of persons and institutions with 50 degrees or more"], "type": "image"}} tags=["figure-2"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Affiliation network of persons and institutions with 50 degrees or more"], "type": "image"}} tags=["figure-2"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig2.png")
 ```
@@ -310,7 +310,7 @@ The last example I want to address are companies (business ventures) and the net
 
 I chose to concentrate my analysis on the individuals that were more important in the entire network. First, I selected the edge list of the individuals that received 20 or more mentions in the *Shenbao*. This approach contributed to removing the cases of institutions with a high degree, but weak links with most individuals in their network. The network initially had 1,406 nodes and 2,286 edges after removing all the A-names (阿) who are not real unique individuals. The three dominant figures are Mo Xiangzhi, Pei Dazhong, and Li Fuxiang. Their pattern of connection shows how much their positions and functions shaped their network. This is obvious for the two county magistrate, Mo Xiangzhi and Pei Dazhong, who share a great number of institutions linked to policing the city, adjudicating judicial matters (Mixed courts, xian office), and handling tax levies. Li Fuxiang is connected mostly to the county magistrate through a limited range of institutions, much of it shipping companies, especially the CMSNC, and the Jiangnan shipyard. Each individual, however, is connected to a much larger set of institutions that are unique to each. The network of these three individuals represents 373 nodes (28 percent of the total) and 409 edges. Beyond these dominant figures, we also find a few other officials (Cai Eryuan (蔡二源), Li Guangdan (黎光旦), Provincial Treasurer (方伯) ) but also a police detective (Wang Rongpei 王榮培), a British Mixed Court official (Luo Shaogeng 羅少耕), and four merchant philanthropists (Shi Shaoqin 施少欽, Shi Shanchang 施善昌, Yan Youzhi 嚴佑之, Li Qiuping 李秋坪).
 
-```R jdh={"object": {"source": ["Figure 3. Affiliation network of persons and organizations with a degree above 20"], "type": "image"}} tags=["figure-3"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Affiliation network of persons and organizations with a degree above 20"], "type": "image"}} tags=["figure-3"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig3.png")
 ```
@@ -353,7 +353,7 @@ I also examined whether community detection would provide relevant clusters. I u
 
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 4. One mode network of individuals with a weight above 15"], "type": "image"}} tags=["figure-4"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["One mode network of individuals with a weight above 15"], "type": "image"}} tags=["figure-4"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig4.png")
 ```
@@ -407,7 +407,7 @@ Graph of individuals (Institutions)
 I set the parameters at 6 for “Contribution”. The distribution of institutions is seriously distorted by the presence of outliers that leave most other institutions in the same group. The PCA separates quite clearly local-level (Shanghai) institutions along Dimension 2. Within the local-level group, we can also discern a stronger correlation between the outliers in this group (mixed courts, CMSNC) and the county magistrate (上海縣暑), Shanghai Municipal Council (工部局) and the Baojia Bureau (保甲總局). Using cos2 does not change the configuration (see Fig1h).
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 1h. Graph of individuals (Institutions) in PCA"], "type": "image"}} tags=["figure-1h"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Graph of individuals (Institutions) in PCA"], "type": "image"}} tags=["figure-1h"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig1herm.png")
 ```
@@ -416,7 +416,7 @@ display_png(file="./media/Fig1herm.png")
 I removed the four main outliers. The general distribution did not change as the largest number of node contribute very little and are grouped together negatively on Dimension 2 and Dimension 1 (see Fig2h).
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 2h. Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-2h"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-2h"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig2herm.png")
 ```
@@ -425,7 +425,7 @@ display_png(file="./media/Fig2herm.png")
 After exploring various levels of classification (4 to 8), I observed that there was no relevance in increasing the number of classes as it failed to change substantially the nature of the highly structured clusters and the less significant clusters. I settled for five classes that produced the graph below.
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 3h. Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-3h"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-3h"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig3herm.png")
 ```
@@ -464,7 +464,7 @@ I processed the file further to remove stopwords that were not in the standard l
 Although the stm package provides a set of metrics to help with defining the optimal number of topics, there is no objective hard benchmark that can tell which model to choose. In fact, this is not a problem in itself because different models can provide increased granularity in shaping the topics from the documents. I built five models with 10, 15, 20, 30, and 50 topics. I proceeded step by step by adding new models and comparing their respective position in terms of exclusivity and semantic coherence. After comparing the results from the four models and their degree of connections/disconnection, as well as the range of topics each produced, I settled for a systematic comparison of the 15-topic and 20-topic models that seemed to provide more adequate and relevant topics. Depending on the actual content of the documents and their degree of heterogeneity/homogeneity, a large number of topics may just produce subsets of prominent topics. This is what happened with the 50-topic model that I eventually discarded. The 10-topic model produced a relevant distribution, yet one that was dissonant with the other models in terms of exclusivity and semantic coherence. In the final stage, I decided to work with only three models with 15, 20, and 30 topics. There was a great deal of overlap between the 15- and 20-topic models. The latter actually refined some of the topics present in the 15-topic model. I found the same degree of consistency between the 20-topic and 30-topic models, with clear overlaps with the extra five topics in the 20-topic model. The 30-topic model, however, provided no more than a fine-grained distribution from the initial set of topics.
 
 
-The 15 -topic model and 20-topic model shared 13 labels, which indicates that almost all topics in the former were included in the latter. The 20-topic model was able to differentiate better two specific topics: Ministries and Shipping. The other topics that the 20-topic model singled out were in fact topics that refined categories in the 15-topic model without adding much information. The final combined topics for the two models — after re-labelling — show a great deal of convergence. There are only three topics that are specific to the 20-topic model: Local officials, Ministry officials, Miscellaneous (this catches mostly incidents such as fires).
+The 15-topic model and 20-topic model shared 13 labels, which indicates that almost all topics in the former were included in the latter. The 20-topic model was able to differentiate better two specific topics: Ministries and Shipping. The other topics that the 20-topic model singled out were in fact topics that refined categories in the 15-topic model without adding much information. The final combined topics for the two models — after re-labelling — show a great deal of convergence. There are only three topics that are specific to the 20-topic model: Local officials, Ministry officials, Miscellaneous (this catches mostly incidents such as fires).
 
 <!-- #region tags=["hermeneutics"] -->
 Based on these results, I did two things:
@@ -474,7 +474,7 @@ Based on these results, I did two things:
 •	decide that M15 is my optimal option for the time being.
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Figure 5. Correlation graph of the topic models"], "type": "image"}} tags=["figure-5"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Correlation graph of the topic models"], "type": "image"}} tags=["figure-5"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig5.png")
 ```
@@ -521,7 +521,7 @@ Topic modelling seems to simplify brutally the content of the documents and to r
 
 Let me first state the obvious. The main topic that overwrites all the other is the issue of social order and justice. Although one can find articles of a different nature — different stories — in each of the following topics, they all point to the interaction of individuals with the local judicial system. The Mixed Courts topic is the most prevalent in the corpus, with its associate topics, Mixed Court & Police and Mixed Court & Women. By and large, this is about the same set of issues, but with a greater emphasis on the role of the police in one case and on the involvement of women in the other. The main Mixed Courts topic covers a wide range of issues, including delinquency, petty crimes, but also commercial disputes. Two other topics fit in the same vein, Xian Officials and Criminality. In the first one, the only difference is that these are similar issues of social disorder and disputes, but these were brought before the county magistrate(s) instead of before the mixed courts. I should note right away that the county magistrates were often involved directly or indirectly in mixed court proceedings. Yet topic modelling detected the difference and delineated a specific topic for affairs that concerned only the *xian* magistrate. The Criminality topic refers to both criminal behaviour in the city and acts of violence and banditry in the larger area around Shanghai, involving other types of officials. The wealth of materials on issues of social disorder could be read as a reflection of the unstable nature of local society after the opening of the city to foreign trade and residency. It is more likely, however, that this reflected before all how the newspaper operated to collect newsworthy information.
 
-```R jdh={"object": {"source": ["Figure 6. Distribution and share of the topics over all documents in the 15-topic model"], "type": "image"}} tags=["figure-6"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Distribution and share of the topics over all documents in the 15-topic model"], "type": "image"}} tags=["figure-6"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig6.png")
 ```
@@ -531,7 +531,7 @@ Except for the two "Relief Operations" topics, the other topics cover issues tha
 
 In the 20-topic model, what I found was mostly a refinement of the topics discussed above. A good example is the Mixed Court French topic that pulled out articles more directly linked to the Mixed Court in the French Concession. In the same way, the Police topic assembles articles from the larger Mixed Courts topic, though with a focus on the action of the police. The model also created a second Local Officials topic that traced further circles in the realm of social disorder with a topic on Shop Disputes, Women & Family (mostly about women kidnapping, sale, and opium), Local Officials & Social Order, and Social Incidents (this was more about house fires and similar issues). The 20-topic model did not alter substantially the distribution and nature of the main themes uncovered by the 15-topic model. There is a high degree of consistency, but it contributes to highlighting where one could look at for more particular inroads into the initial topics. The only new topic was a set of articles that concerned officials of imperial ministries. If we look at the additional topics in the 30-topic model, there is a mix of what I call refined topics and new topics. Under the former, Charity & medicine is clearly an offshoot of Relief Operations, Banditry is a subset of Criminality with a focus on areas external to Shanghai, Foreigners & Consulates emerges from the original Shipping & Consulates, with a focus on Westerners, Companies and Business (also present in the 20-topic model). The Police topic branches into a more precise topic on the police of the foreign settlements. Four topics seem to be more original, even if they were somehow subsumed in the previous models. The 30-topic model introduces two topics where opium figures in association with issues of trade or women (opium dens). It also sets apart a topic that deals with the academies of classical learning and not unsurprisingly a topic whose centre is Li Fuxiang.
 
-```R jdh={"object": {"source": ["Figure 7. Correlation graph of the 15 topics in the 15-topic model"], "type": "image"}} tags=["figure-7"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Correlation graph of the 15 topics in the 15-topic model"], "type": "image"}} tags=["figure-7"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig7.png")
 ```
@@ -541,7 +541,7 @@ The three correlation graphs for the 15-, 20- and 30-topic models show a consist
 
 There were a few noticeable changes over time in the relative importance of topics. One cannot point to a very drastic evolution, but rather to smooth trends. I shall take the 15-topic and the 20-topic models as examples, just because even beyond ten different colours, a graph becomes difficult to decipher. The two graphs show the proportion of each topic in a given year. Let us first point out what seems to be an anomaly. In 1872, the share of advertising by publishers seems very high, but it is not representative. This was the very start of the newspaper, with only a few months of publication at the start of the newspaper and, unsurprisingly, it was filled with advertising that probably also included advertisements by the *Shenbao* itself. We can see that three topics experienced a certain growth, Topic 10 (Xian officials), especially at the end of the period, Topic 12 (Chinese Army) also increased by the end of the period and Topic 4, with an increase around 1880. The other topics hardly changed, except for a small decline of the general Mixed Courts topic. The 20-topic graph did present a more diverse evolution. It singled out Topic 10 (Criminality) as a consistently increasing autonomous topic, while Topic 19 (Mixed Court French) also showed ups and down, but at a fairly high level throughout the period. In parallel, Topic 12 (Mixed Court & Police) experienced a noticeable increase, especially at the end of the period. On the opposite, Topic 8 (Local officials & Criminality) lost in importance substantially in the last years. We can make two preliminary observations about the use of different models: the shift from 15 topics to 20 topics highlights better the trends that shaped the news thanks to a more precise focus on sub-topics. On the other hand, there was by and large a certain stability in the nature of the types of news that the *Shenbao* chose to publish.
 
-```R jdh={"object": {"source": ["Figure 8. Topic proportion over time in the 15- topic model (1872-1892)"], "type": "image"}} tags=["figure-8"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Topic proportion over time in the 15- topic model (1872-1892)"], "type": "image"}} tags=["figure-8"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig8.png")
 ```
@@ -567,12 +567,12 @@ The processing of the sub-dataset divided the original Xian official topic into 
 Table 7. Topics in the 15-topic model for the ‘Xian Officials’ topic
 
 
-The reading of the articles helped to get a better grasp of the content of the articles and why they were brought together under the same topic, but it did not alter the initial labelling of the topics. In other words, the set of most common words in each topic was generally sufficient to understand what a topic was about. It does not mean that the articles in each topic were mutually exclusive or that they belonged strictly to a given topic. What seems to make a difference is the mix of terms found in articles that pull them more toward a topic than another. The county magistrates topic in this subset includes articles that could have been assigned to other topics and there is no denial that the dividing line between topics is sometimes very thin. 
+The reading of the articles helped to get a better grasp of the content of the articles and why they were brought together under the same topic, but it did not alter the initial labelling of the topics. In other words, the set of most common words in each topic was generally sufficient to understand what a topic was about. It does not mean that the articles in each topic were mutually exclusive or that they belonged strictly to a given topic. What seems to make a difference is the mix of terms found in articles that pull them more toward a topic than another. The county magistrates topic in this subset includes articles that could have been assigned to other topics and there is no denial that the dividing line between topics is sometimes very thin.
 
 
 I selected the first 15 documents to examine to which topic they related more. This provides a better illustration of the composition of topics within a given document.
 
-```R jdh={"object": {"source": ["Figure 9. Topic distribution among the first fifteen documents of the sample"], "type": "image"}} tags=["figure-9"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Topic distribution among the first fifteen documents of the sample"], "type": "image"}} tags=["figure-9"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig9.png")
 ```
@@ -582,7 +582,7 @@ We can see for example that document 6 is strongly associated with topic 14 and 
 
 In figure 10, the display of the top 50 words in each topic can highlight better the differences and the impact on word distribution on the definition of topics. The word cloud visualization is only one way to materialize what can also be seen in the form of tables.
 
-```R jdh={"object": {"source": ["Figure 10. Word frequency for nine topics in the form of word clouds"], "type": "image"}} tags=["figure-10"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Word frequency for nine topics in the form of word clouds"], "type": "image"}} tags=["figure-10"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig10.png")
 ```
