@@ -13,21 +13,6 @@ jupyter:
     name: ir
 ---
 
-neighbours---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.4
-  kernelspec:
-    display_name: R
-    language: R
-    name: ir
----
-
 <!-- #region tags=["title"] -->
 # Eminent Chinese of the *Shenbao* (1872-1891). A digital investigation of news reporting and newspaper-making in late imperial China
 <!-- #endregion -->
