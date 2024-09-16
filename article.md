@@ -419,19 +419,19 @@ The graph of variables show that all the variables are well projected, through s
 <!-- #region tags=["hermeneutics"] -->
 Graph of individuals (Institutions)
 
-I set the parameters at 6 for “Contribution”. The distribution of institutions is seriously distorted by the presence of outliers that leave most other institutions in the same group. The PCA separates quite clearly local-level (Shanghai) institutions along Dimension 2. Within the local-level group, we can also discern a stronger correlation between the outliers in this group (mixed courts, CMSNC) and the county magistrate (上海縣暑), Shanghai Municipal Council (工部局) and the Baojia Bureau (保甲總局). Using cos2 does not change the configuration (see Fig1h).
+I set the parameters at 6 for “Contribution”. The distribution of institutions is seriously distorted by the presence of outliers that leave most other institutions in the same group. The PCA separates quite clearly local-level (Shanghai) institutions along Dimension 2. Within the local-level group, we can also discern a stronger correlation between the outliers in this group (mixed courts, CMSNC) and the county magistrate (上海縣暑), Shanghai Municipal Council (工部局) and the Baojia Bureau (保甲總局). Using cos2 does not change the configuration (see Figure 5).
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Graph of individuals (Institutions) in PCA"], "type": "image"}} tags=["figure-1h"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Graph of individuals (Institutions) in PCA"], "type": "image"}} tags=["figure-5"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig1herm.png")
 ```
 
 <!-- #region tags=["hermeneutics"] -->
-I removed the four main outliers. The general distribution did not change as the largest number of node contribute very little and are grouped together negatively on Dimension 2 and Dimension 1 (see Fig2h).
+I removed the four main outliers. The general distribution did not change as the largest number of node contribute very little and are grouped together negatively on Dimension 2 and Dimension 1 (see Figure 6).
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-2h"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-6"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig2herm.png")
 ```
@@ -440,7 +440,7 @@ display_png(file="./media/Fig2herm.png")
 After exploring various levels of classification (4 to 8), I observed that there was no relevance in increasing the number of classes as it failed to change substantially the nature of the highly structured clusters and the less significant clusters. I settled for five classes that produced the graph below.
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-3h"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Graph of individuals (Institutions) without outliers in PCA"], "type": "image"}} tags=["figure-7"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig3herm.png")
 ```
@@ -489,7 +489,7 @@ Based on these results, I did two things:
 •	decide that M15 is my optimal option for the time being.
 <!-- #endregion -->
 
-```R jdh={"object": {"source": ["Correlation graph of the topic models"], "type": "image"}} tags=["figure-5"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Correlation graph of the topic models"], "type": "image"}} tags=["figure-8"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig5.png")
 ```
@@ -536,7 +536,7 @@ Topic modelling seems to simplify brutally the content of the documents and to r
 
 Let me first state the obvious. The main topic that overwrites all the other is the issue of social order and justice. Although one can find articles of a different nature — different stories — in each of the following topics, they all point to the interaction of individuals with the local judicial system. The Mixed Courts topic is the most prevalent in the corpus, with its associate topics, Mixed Court & Police and Mixed Court & Women. By and large, this is about the same set of issues, but with a greater emphasis on the role of the police in one case and on the involvement of women in the other. The main Mixed Courts topic covers a wide range of issues, including delinquency, petty crimes, but also commercial disputes. Two other topics fit in the same vein, Xian Officials and Criminality. In the first one, the only difference is that these are similar issues of social disorder and disputes, but these were brought before the county magistrate(s) instead of before the mixed courts. I should note right away that the county magistrates were often involved directly or indirectly in mixed court proceedings. Yet topic modelling detected the difference and delineated a specific topic for affairs that concerned only the *xian* magistrate. The Criminality topic refers to both criminal behaviour in the city and acts of violence and banditry in the larger area around Shanghai, involving other types of officials. The wealth of materials on issues of social disorder could be read as a reflection of the unstable nature of local society after the opening of the city to foreign trade and residency. It is more likely, however, that this reflected before all how the newspaper operated to collect newsworthy information.
 
-```R jdh={"object": {"source": ["Distribution and share of the topics over all documents in the 15-topic model"], "type": "image"}} tags=["figure-6"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Distribution and share of the topics over all documents in the 15-topic model"], "type": "image"}} tags=["figure-9"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig6.png")
 ```
@@ -546,17 +546,17 @@ Except for the two "Relief Operations" topics, the other topics cover issues tha
 
 In the 20-topic model, what I found was mostly a refinement of the topics discussed above. A good example is the Mixed Court French topic that pulled out articles more directly linked to the Mixed Court in the French Concession. In the same way, the Police topic assembles articles from the larger Mixed Courts topic, though with a focus on the action of the police. The model also created a second Local Officials topic that traced further circles in the realm of social disorder with a topic on Shop Disputes, Women & Family (mostly about women kidnapping, sale, and opium), Local Officials & Social Order, and Social Incidents (this was more about house fires and similar issues). The 20-topic model did not alter substantially the distribution and nature of the main themes uncovered by the 15-topic model. There is a high degree of consistency, but it contributes to highlighting where one could look at for more particular inroads into the initial topics. The only new topic was a set of articles that concerned officials of imperial ministries. If we look at the additional topics in the 30-topic model, there is a mix of what I call refined topics and new topics. Under the former, Charity & medicine is clearly an offshoot of Relief Operations, Banditry is a subset of Criminality with a focus on areas external to Shanghai, Foreigners & Consulates emerges from the original Shipping & Consulates, with a focus on Westerners, Companies and Business (also present in the 20-topic model). The Police topic branches into a more precise topic on the police of the foreign settlements. Four topics seem to be more original, even if they were somehow subsumed in the previous models. The 30-topic model introduces two topics where opium figures in association with issues of trade or women (opium dens). It also sets apart a topic that deals with the academies of classical learning and not unsurprisingly a topic whose centre is Li Fuxiang.
 
-```R jdh={"object": {"source": ["Correlation graph of the 15 topics in the 15-topic model"], "type": "image"}} tags=["figure-7"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Correlation graph of the 15 topics in the 15-topic model"], "type": "image"}} tags=["figure-10"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig7.png")
 ```
 
-The three correlation graphs for the 15-, 20- and 30-topic models show a consistent pattern of semantic proximity between the same topics (see Figure 7). The topics that involve the Mixed Courts, the police, criminality, banditry, women, and by extension opium and foreigners share greater similarity than the grouping between relief operations or, in the 30-topic model, Li Fuxiang, foreign affairs, and foreigners. It also establishes that depending on the degree of granularity, one can see shifts in how the topic model traced dividing lines, such as with Shipping & Consulates (15-topic), which translates into three distinct topics, with Companies & Business, Shipping, and Foreigners & Consulates. Yet, it also appears that Companies & Business was semantically linked to the Mixed Courts grouping. This points to the prevalence of disputes brought before the courts in the news about commercial companies.
+The three correlation graphs for the 15-, 20- and 30-topic models show a consistent pattern of semantic proximity between the same topics (see Figure 10). The topics that involve the Mixed Courts, the police, criminality, banditry, women, and by extension opium and foreigners share greater similarity than the grouping between relief operations or, in the 30-topic model, Li Fuxiang, foreign affairs, and foreigners. It also establishes that depending on the degree of granularity, one can see shifts in how the topic model traced dividing lines, such as with Shipping & Consulates (15-topic), which translates into three distinct topics, with Companies & Business, Shipping, and Foreigners & Consulates. Yet, it also appears that Companies & Business was semantically linked to the Mixed Courts grouping. This points to the prevalence of disputes brought before the courts in the news about commercial companies.
 
 
 There were a few noticeable changes over time in the relative importance of topics. One cannot point to a very drastic evolution, but rather to smooth trends. I shall take the 15-topic and the 20-topic models as examples, just because even beyond ten different colours, a graph becomes difficult to decipher. The two graphs show the proportion of each topic in a given year. Let us first point out what seems to be an anomaly. In 1872, the share of advertising by publishers seems very high, but it is not representative. This was the very start of the newspaper, with only a few months of publication at the start of the newspaper and, unsurprisingly, it was filled with advertising that probably also included advertisements by the *Shenbao* itself. We can see that three topics experienced a certain growth, Topic 10 (Xian officials), especially at the end of the period, Topic 12 (Chinese Army) also increased by the end of the period and Topic 4, with an increase around 1880. The other topics hardly changed, except for a small decline of the general Mixed Courts topic. The 20-topic graph did present a more diverse evolution. It singled out Topic 10 (Criminality) as a consistently increasing autonomous topic, while Topic 19 (Mixed Court French) also showed ups and down, but at a fairly high level throughout the period. In parallel, Topic 12 (Mixed Court & Police) experienced a noticeable increase, especially at the end of the period. On the opposite, Topic 8 (Local officials & Criminality) lost in importance substantially in the last years. We can make two preliminary observations about the use of different models: the shift from 15 topics to 20 topics highlights better the trends that shaped the news thanks to a more precise focus on sub-topics. On the other hand, there was by and large a certain stability in the nature of the types of news that the *Shenbao* chose to publish.
 
-```R jdh={"object": {"source": ["Topic proportion over time in the 15- topic model (1872-1892)"], "type": "image"}} tags=["figure-8"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Topic proportion over time in the 15- topic model (1872-1892)"], "type": "image"}} tags=["figure-11"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig8.png")
 ```
@@ -587,7 +587,7 @@ The reading of the articles helped to get a better grasp of the content of the a
 
 I selected the first 15 documents to examine to which topic they related more. This provides a better illustration of the composition of topics within a given document.
 
-```R jdh={"object": {"source": ["Topic distribution among the first fifteen documents of the sample"], "type": "image"}} tags=["figure-9"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Topic distribution among the first fifteen documents of the sample"], "type": "image"}} tags=["figure-12"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig9.png")
 ```
@@ -597,7 +597,7 @@ We can see for example that document 6 is strongly associated with topic 14 and 
 
 In figure 10, the display of the top 50 words in each topic can highlight better the differences and the impact on word distribution on the definition of topics. The word cloud visualization is only one way to materialize what can also be seen in the form of tables.
 
-```R jdh={"object": {"source": ["Word frequency for nine topics in the form of word clouds"], "type": "image"}} tags=["figure-10"] vscode={"languageId": "r"}
+```R jdh={"object": {"source": ["Word frequency for nine topics in the form of word clouds"], "type": "image"}} tags=["figure-13"] vscode={"languageId": "r"}
 library("IRdisplay")
 display_png(file="./media/Fig10.png")
 ```
