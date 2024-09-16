@@ -18,7 +18,7 @@ jupyter:
 <!-- #endregion -->
 
 <!-- #region tags=["contributor"] -->
- ### Christian  Henriot [![0000-0002-1488-4367](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/ORCID_ID)
+ ### Christian  Henriot [![0000-0002-1488-4367](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-1488-4367)
 Aix-Marseille University
 <!-- #endregion -->
 
