@@ -180,7 +180,7 @@ display_png(file="./media/Fig1.png")
 
 There was of course a huge inequality among the 57,950 names that appeared in the news reporting of the *Shenbao* in terms of mentions. The vast majority — 45,313 — appeared only once. In fact, only 3.1 percent of all names appeared more than five times in the *Shenbao*, and only 0.5 percent appeared twenty times or more. Since our study covers a period of twenty years, it means that even if the distribution of mentions was not even throughout the period and some mentions may have been concentrated in a short period, it is obvious that the historian is likely and unluckily facing a huge population of nobodies for the most part. It is also obvious that only those with a number of mentions above ten, if they were concentrated during a given period, referred to individuals with a certain degree of eminence. The truly eminent ones, however, were those in the list of names mentioned more than twenty times, even if a few are artificial statistical constructs as we shall see later.
 
-<!-- #region jdh={"object": {"source": ["Table 1. Distribution of names by frequency in the Shenbao (1872-1892)"], "type": "table"}} tags=["table-1", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["Distribution of names by frequency in the Shenbao (1872-1892)"], "type": "table"}} tags=["table-1", "hermeneutics"] -->
 | Mentions | Number | Percentage |
 |----------|--------|------------|
 | 1        | 4413   |      74.0% |
@@ -193,7 +193,7 @@ There was of course a huge inequality among the 57,950 names that appeared in th
 
 The two most important figures were local officials, Mo Xiangzhi (莫祥芝) and Pei Dazhong (裴大中), both Shanghai county magistrates, respectively in 1876-1879 and 1887-1890. We can add to this roster another Shanghai county magistrate, Li Guangdan (黎光旦) who served in 1882-1884. In-between, we find Li Fuxiang 李傅相[Li Hongzhang] who was by then at the peak of his career.  In 1870, Li became Viceroy of Zhili and Beiyang Trade Minister until his death in 1901. He was a major national figure who wielded considerable power in foreign policy. Although he was no longer in the Jiangnan area, he kept an eye on the enterprises he had launched and, moreover, he continued to play a leading role at the national level as Viceroy of Zhili and Beiyang Trade Minister. As we go down the list of names, it becomes more difficult to identify individuals without much research. Li Boxiang (李伯相) was a high-ranking official who worked alongside Li Fuxiang in foreign affairs. Gong Yangqu (龔仰蘧) and Yuan Haiguan (袁海觀) were both Qing officials, the latter a Shanghai daotai. Cai Eryuan (蔡二源) was a would-be official who gave up officialdom and converted to business, while Liu Shengsan (劉省三) was a military official. Ge Fanfu (葛蕃甫) and Song Eryi 宋二尹 (37) served as Chinese judge assessors at the French or British Mixed Court. They were mentioned exclusively in relation to judicial decisions. Wang Rongpei (王榮培) was a Chinese detective (baotan包探) attached to the British Mixed Court. Kong Yin (孔殷) remains a mystery at this stage. The name *fangbo* (方伯) is not an actual person, but several persons. It was the title for the provincial treasurer (buzhengli 布政使) that was simply disconnected from the name of the individuals who held the position.  The reader will have noted that I left aside a few names, such as Chen Ajiu (陳阿九), Wang A’er (王阿二) or Wang Asan (王阿三), even if they ranked high because there are typical examples of names that each represented several individuals by the same name.
 
-<!-- #region jdh={"object": {"source": ["Table 2. The most frequent names of individuals in the dataset (1872-1892)"], "type": "table"}} tags=["table-2", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["The most frequent names of individuals in the dataset (1872-1892)"], "type": "table"}} tags=["table-2", "hermeneutics"] -->
 |  Name  | Mentions |  Name  | Mentions |  Name  | Mentions |  Name  | Mentions |  Name  | Mentions |
 |:------:|:--------:|:------:|:--------:|:------:|:--------:|:------:|:--------:|:------:|:--------:|
 | 莫祥芝 | 620      | 顧阿六 | 124      | 龔仰蘧 | 87       | 阿寳   | 68       | 曾襲侯 | 56       |
@@ -217,7 +217,7 @@ The 57,657 names of individuals in the dataset were linked to 5,967 organization
 The method consists in matching the names in the list of organization to the names in an index we have been developing with each round of data processing. The index contains all the identified name variants and their standard name. Only the names that do not find a match require manual verification and normalization. Each new pair of terms is added incrementally to the reference index.
 <!-- #endregion -->
 
-<!-- #region jdh={"object": {"source": ["Table 3. The most frequent organizations in the dataset (1872-1892)"], "type": "table"}} tags=["table-3", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["The most frequent organizations in the dataset (1872-1892)"], "type": "table"}} tags=["table-3", "hermeneutics"] -->
 |   Institution  | Mentions |  Institution | Mentions |    Institution   | Mentions |
 |:--------------:|:--------:|:------------:|:--------:|:----------------:|:--------:|
 | 英界會審公堂   | 940      | 英總領事署   | 114      | 法國公司         | 72       |
@@ -244,7 +244,7 @@ Outside the realm of public institutions, the most important organizations were 
 
 To refine my analysis, I applied a two-level typology to organizations. Type 1 is based on the full name of the organization and on the one or two main defining characters at the end of the name. Certain terms create a confusion, such as “Bureau” (ju 局) which at the time designated either a public institution, a sub-level in a public institution, a charity organization, or a civic organization (reconstruction bureau). The typology paints a diverse and detailed landscape. Indeed, bureaus and mixed courts top the list, but we can see that among business ventures, foreign good firms (from small outlets to import-export companies), shops, and banks were quite prominent, along with shipping companies and general companies (gongsi 公司). There is a strong component of Chinese administrative bodies (prefecture, circuit intendent, departments, courts, etc.). Although some were mentions of industrial companies abroad, there was a good crop of factories and workshops in Shanghai and other locations in China. There was a more limited presence of establishments of leisure and entertainment. Finally, whereas we found a high number of temples, there was hardly any mention of churches.
 
-<!-- #region jdh={"object": {"source": ["Table 4. Typology of organizations mentioned in the Shenbao (1872-1892)"], "type": "table"}} tags=["table-1", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["Typology of organizations mentioned in the Shenbao (1872-1892)"], "type": "table"}} tags=["table-4", "hermeneutics"] -->
 |         Type 1        | Number |           Type 1           | Number |          Type 1          | Number |
 |:---------------------:|:------:|:--------------------------:|:------:|:------------------------:|:------:|
 | Bureau                | 2820   | Army                       | 462    | Telegraph                | 176    |
@@ -282,7 +282,7 @@ This is a 2-mode (or affiliation) network that I created and analysed with [Cyto
 
 To analyse the network, I applied the pruning method that consists in removing nodes based on the number of degrees to assess the level of coherence of the network and to highlight the core elements of the network (<cite data-cite="71251/BSUZAFGJ"></cite>).  The range for degrees goes from 1 to 2,097 (British Mixed Court 英界會審公堂). I removed the nodes through successive decreasing threshold:
 
-<!-- #region jdh={"object": {"source": ["Table 5. Pruning table"], "type": "table"}} tags=["table-5", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["Pruning table"], "type": "table"}} tags=["table-5", "hermeneutics"] -->
 | Mention | Number | Percentage |
 |:-------:|:------:|------------|
 | 1       | 45,313 |      78.2% |
