@@ -408,7 +408,7 @@ The graph of variables show that all the variables are well projected, through s
 
 <!-- #endregion -->
 
-<!-- #region jdh={"object": {"source": ["Table 1. Distribution of names by frequency in the Shenbao (1872-1891)"], "type": "table"}} tags=["table-1", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["Distribution of names by frequency in the Shenbao (1872-1891)"], "type": "table"}} tags=["table-7", "hermeneutics"] -->
 |                         |  Dim.1  |  Dim.2  |  Dim.3 |  Dim.4 |
 |-------------------------|:-------:|:-------:|:------:|:------:|
 | Variance                |   2.741 |   0.983 |  0.226 |  0.050 |
