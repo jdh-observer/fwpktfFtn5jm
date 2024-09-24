@@ -393,7 +393,7 @@ The graph of variables show that all the variables are well projected, through s
 
 <!-- #endregion -->
 
-<!-- #region jdh={"object": {"source": ["Distribution of names by frequency in the Shenbao (1872-1891)"], "type": "table"}} tags=["table-7", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["Distribution of names by frequency in the Shenbao (1872-1891)"], "type": "table"}} tags=["table-6", "hermeneutics"] -->
 |                         |  Dim.1  |  Dim.2  |  Dim.3 |  Dim.4 |
 |-------------------------|:-------:|:-------:|:------:|:------:|
 | Variance                |   2.741 |   0.983 |  0.226 |  0.050 |
@@ -481,7 +481,7 @@ display_png(file="./media/Fig5.png")
 
 To examine the results from the different models, I followed the same script. First, I selected the ten top words in each topic to determine a priori the nature of the topic and to attribute a label to it. Second, I studied the graphs and statistics that the stm package provided to situate the relative importance of each topic in the corpus. Third, I selected ten representative documents from each topic for close reading. Reading the documents allowed me to refine the labels and to provide a succinct description of each.
 
-<!-- #region jdh={"object": {"source": ["Table 6. List of the 15 topics and the additional topics added by each model"], "type": "table"}} tags=["table-6", "hermeneutics"] -->
+<!-- #region jdh={"object": {"source": ["List of the 15 topics and the additional topics added by each model"], "type": "table"}} tags=["table-7", "hermeneutics"] -->
 | Topic   number | Topic15               | Topic 20                       | Topic 30                |
 |----------------|-----------------------|--------------------------------|-------------------------|
 | 1              | Miscellaneous news    | Charity Announcement           | Academies               |
