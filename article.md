@@ -583,8 +583,6 @@ The processing of the sub-dataset divided the original Xian official topic into 
 | 15    | 15 Mixed Court IS         | 0.038      |
 <!-- #endregion -->
 
-
-
 The reading of the articles helped to get a better grasp of the content of the articles and why they were brought together under the same topic, but it did not alter the initial labelling of the topics. In other words, the set of most common words in each topic was generally sufficient to understand what a topic was about. It does not mean that the articles in each topic were mutually exclusive or that they belonged strictly to a given topic. What seems to make a difference is the mix of terms found in articles that pull them more toward a topic than another. The county magistrates topic in this subset includes articles that could have been assigned to other topics and there is no denial that the dividing line between topics is sometimes very thin.
 
 
