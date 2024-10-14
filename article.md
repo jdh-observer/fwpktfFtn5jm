@@ -563,8 +563,26 @@ The Xian Officials topic assembles articles that focussed more exclusively on th
 
 The processing of the sub-dataset divided the original Xian official topic into more specifically defined topics. Issues of social order remained prevalent in most topics, with the Police Court Chinese ranking first in terms of proportions for single documents (49 percent). In the table below, we still find topics that were present in the topic modelling of the whole dataset, such as Relief operations, Charity, etc. In most cases, this would also reflect the actual involvement of the *xian* magistrate in these fields. By and large, however, topic modelling shaped new topics. These topics delineated arenas of official intervention that allow us to grasp more precisely what the *xian* officials dealt with on a regular basis. In the table below, I labelled the topics on the basis of the main terms (10 each) that were associated to each topic. I also retrieved the ten articles in each topic with the highest proportion score and read systematically five to ten articles depending on the degree of homogeneity and correspondence that I observed in relation with the given topic.
 
+<!-- #region jdh={"object": {"source": ["Topics in the 15-topic model for the ‘Xian Officials’ topic"], "type": "table"}} tags=["table-8"] -->
+| Topic | Label                     | Proportion |
+|-------|---------------------------|------------|
+| 9     | 09 Army Ship Inspection   | 0.118      |
+| 7     | 07 Police Court Chinese   | 0.116      |
+| 6     | 06 Xian Magistrates       | 0.101      |
+| 1     | 01 Bandits Ships Sailors  | 0.084      |
+| 12    | 12 Xian Official Court    | 0.064      |
+| 14    | 14 Relief Operations      | 0.060      |
+| 8     | 08 Liumang Violence       | 0.059      |
+| 3     | 03 Police Rescue Wounded  | 0.056      |
+| 2     | 02 Sima Court Shops       | 0.055      |
+| 4     | 04 Xian Magistrate Office | 0.055      |
+| 5     | 05 Police French Opium    | 0.055      |
+| 10    | 10 Money Girl             | 0.050      |
+| 11    | 11 Charity Shenbao Shandong| 0.045     |
+| 13    | 13 Police Thieves         | 0.043      |
+| 15    | 15 Mixed Court IS         | 0.038      |
+<!-- #endregion -->
 
-Table 7. Topics in the 15-topic model for the ‘Xian Officials’ topic
 
 
 The reading of the articles helped to get a better grasp of the content of the articles and why they were brought together under the same topic, but it did not alter the initial labelling of the topics. In other words, the set of most common words in each topic was generally sufficient to understand what a topic was about. It does not mean that the articles in each topic were mutually exclusive or that they belonged strictly to a given topic. What seems to make a difference is the mix of terms found in articles that pull them more toward a topic than another. The county magistrates topic in this subset includes articles that could have been assigned to other topics and there is no denial that the dividing line between topics is sometimes very thin.
