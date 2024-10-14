@@ -6,7 +6,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.4
+      jupytext_version: 1.16.4
   kernelspec:
     display_name: R
     language: R
@@ -563,7 +563,7 @@ The Xian Officials topic assembles articles that focussed more exclusively on th
 
 The processing of the sub-dataset divided the original Xian official topic into more specifically defined topics. Issues of social order remained prevalent in most topics, with the Police Court Chinese ranking first in terms of proportions for single documents (49 percent). In the table below, we still find topics that were present in the topic modelling of the whole dataset, such as Relief operations, Charity, etc. In most cases, this would also reflect the actual involvement of the *xian* magistrate in these fields. By and large, however, topic modelling shaped new topics. These topics delineated arenas of official intervention that allow us to grasp more precisely what the *xian* officials dealt with on a regular basis. In the table below, I labelled the topics on the basis of the main terms (10 each) that were associated to each topic. I also retrieved the ten articles in each topic with the highest proportion score and read systematically five to ten articles depending on the degree of homogeneity and correspondence that I observed in relation with the given topic.
 
-<!-- #region jdh={"object": {"source": ["Topics in the 15-topic model for the ‘Xian Officials’ topic"], "type": "table"}} tags=["table-8"] -->
+<!-- #region jdh={"object": {"source": ["Topics in the 15-topic model for the \u2018Xian Officials\u2019 topic"], "type": "table"}} tags=["table-8"] -->
 | Topic | Label                     | Proportion |
 |-------|---------------------------|------------|
 | 9     | 09 Army Ship Inspection   | 0.118      |
